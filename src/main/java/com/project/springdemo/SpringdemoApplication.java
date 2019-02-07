@@ -4,6 +4,8 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
 
+import com.project.springdemo.controller.GreetingController;
+
 @SpringBootApplication
 public class SpringdemoApplication {
 
@@ -11,16 +13,10 @@ public class SpringdemoApplication {
 
 		ApplicationContext ctx = SpringApplication.run(SpringdemoApplication.class, args);
 		
-		// Example of creating a bean and then using that bean to print hello World
-		HelloWorldImpl helloWorldImpl = (HelloWorldImpl) ctx.getBean("helloWorldImpl");
-		helloWorldImpl.sayHello();
 		
-		// Example to show the Constructor based injection
-		InjectedByConsturctorService injectedByConsturctorService = (InjectedByConsturctorService) ctx.getBean("injectedByConsturctorService");
-		injectedByConsturctorService.getMessage();
+		GreetingController greetingController = (GreetingController) ctx.getBean("greetingController");
 		
-		// Example to show the Setter based injection
-		SetterbasedInjection setterbasedInjection = (SetterbasedInjection) ctx.getBean("setterbasedInjection");
-		setterbasedInjection.getMessage();
+		System.out.println(greetingController.sayHello());
+
 	}
 }

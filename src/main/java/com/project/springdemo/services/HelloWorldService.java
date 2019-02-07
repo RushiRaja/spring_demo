@@ -1,9 +1,9 @@
-package com.project.springdemo;
+package com.project.springdemo.services;
 
 import org.springframework.stereotype.Component;
 
 @Component
 public interface HelloWorldService {
 
-	void sayHello();
+	public String getGreetings();
 }
