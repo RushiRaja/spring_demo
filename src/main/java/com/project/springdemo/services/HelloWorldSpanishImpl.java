@@ -1,16 +1,15 @@
 package com.project.springdemo.services;
 
 /**
- * 
  * @author Rushiraja
- *
+ * 
  */
-
-public class HelloWorldEnglishImpl implements HelloWorldService {
+public class HelloWorldSpanishImpl implements HelloWorldService {
 
 	@Override
 	public String getGreetings() {
-
-		return "Hello World !!!";
+		
+		return "Hollllaaa Mudo !!!!!";
 	}
+
 }
